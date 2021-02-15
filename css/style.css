@@ -10,3 +10,15 @@ h3{
     margin-bottom: 0px;
     font-size: 30px;
 }
+table{
+    border-style: solid;
+}
+tr{
+    border-style: solid;
+}
+th{
+    border-style: solid;
+}
+td{
+    border-style: solid;
+}
