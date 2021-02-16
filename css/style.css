@@ -77,6 +77,15 @@ h3{
     list-style: circle;
 }
 
+h4 {
+    color:rgb(114, 146, 250);
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.photos{
+    width: 15%;
+}
+
 footer{
     padding-top: 20px;
     font-size: 20px;
