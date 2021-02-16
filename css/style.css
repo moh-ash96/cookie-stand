@@ -1,8 +1,34 @@
+*{
+    background-color: rgb(255, 236, 212);
+}
+li {
+    list-style-type: none;
+}
+
+#homeb {
+    list-style-type: none;
+    font-size: 40px;
+    font-family: 'Ranchers', cursive;
+}
+#homeb a {
+    text-decoration: none;
+    color: rgb(114, 146, 250);
+
+}
+#Salesb li {
+    font-size: 30px;
+    font-family:'Ranchers', cursive ;
+    font-weight: bold;
+}
+#Salesb li a {
+    text-decoration: none;
+
+}
 h1{
     font-family: 'Anton', sans-serif;
     text-align: center;
-    color: salmon;
-    font-size: 40px;
+    color: rgb(114, 146, 250);
+    font-size: 81px;
 }
 h3{
     font-family: 'El Messiri', sans-serif;
@@ -10,15 +36,52 @@ h3{
     margin-bottom: 0px;
     font-size: 30px;
 }
+#container{
+    margin-top: 100px;
+    margin-left: 288px;
+}
 table{
     border-style: solid;
+    
+
 }
 tr{
     border-style: solid;
 }
 th{
     border-style: solid;
+    font-family:'El Messiri', sans-serif ;
 }
 td{
     border-style: solid;
+    font-family: 'El Messiri', sans-serif;
+    text-align: center;
+}
+
+h3{
+ font-family: 'Josefin Sans', sans-serif;;
+ color: royalblue;
+}
+#homep{
+    font-size: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+#loc {
+    
+    font-size: 30px;
+    font-family: monospace;
+    color: seagreen;
+}
+#loc li{
+    list-style: circle;
+}
+
+footer{
+    padding-top: 20px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    height: 100px;
+    background-color: rgb(255, 208, 174);
+    text-align: center;
 }
