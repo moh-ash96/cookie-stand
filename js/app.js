@@ -29,46 +29,18 @@ Branch.prototype.calcAvgCookiePerHour = function () {
 }
 
 let Seattle = new Branch('Seattle', 23, 65, 6.3);
-Seattle.random();
-Seattle.customersPerHourFun();
-Seattle.calcAvgCookiePerHour();
 
 let Tokyo = new Branch('Tokyo', 3, 24, 1.2);
-Tokyo.random();
-Tokyo.customersPerHourFun();
-Tokyo.calcAvgCookiePerHour();
 
 let Dubai = new Branch('Dubai', 11, 38, 3.7);
-Dubai.random();
-Dubai.customersPerHourFun();
-Dubai.calcAvgCookiePerHour();
 
 let Paris = new Branch('Paris', 20, 38, 2.3);
-Paris.random();
-Paris.customersPerHourFun();
-Paris.calcAvgCookiePerHour();
 
 let Lima = new Branch('Lima', 2, 16, 4.6);
-Lima.random();
-Lima.customersPerHourFun();
-Lima.calcAvgCookiePerHour();
 
-let totalCo = [];
-function totalCoo() {
-    for (let i = 0; i < workingHours.length; i++) {
-        totalCo.push(Seattle.avgCookiePerHour[i] + Tokyo.avgCookiePerHour[i] + Dubai.avgCookiePerHour[i] + Paris.avgCookiePerHour[i] + Lima.avgCookiePerHour[i]);
-    }
-}
-totalCoo();
-let totalOfTotal = 0;
-function totalTotal() {
-    for (let i = 0; i < workingHours.length; i++) {
-        totalOfTotal += totalCo[i];
-    }
-}
-totalTotal();
 
-console.log(branches);
+
+
 
 let parent = document.getElementById('container');
 let table = document.createElement('table');
@@ -81,6 +53,7 @@ function tableHead() {
     let headingDatain = document.createElement('th');
     headingRow.appendChild(headingDatain);
     headingDatain.textContent = 'Working hours/Locations';
+    
     for (let i = 0; i < workingHours.length; i++) {
         let headingData = document.createElement('th');
         headingRow.appendChild(headingData);
@@ -92,101 +65,59 @@ function tableHead() {
 }
 tableHead();
 
-function tableMain() {
-    let dataRow1 = document.createElement('tr');
-    table.appendChild(dataRow1);
-    let rowName1 = document.createElement('td');
-    dataRow1.appendChild(rowName1);
-    rowName1.textContent= (branches[0].name);
-    for(let i=0; i<workingHours.length; i++){
-    let rowContent1 = document.createElement('td');
-    dataRow1.appendChild(rowContent1);
-    rowContent1.textContent= (branches[0].avgCookiePerHour[i]);
+
+Branch.prototype.render= function() {
+    let dataRow = document.createElement('tr');
+    table.appendChild(dataRow);
+    
+    let rowName = document.createElement('td');
+    dataRow.appendChild(rowName);
+    rowName.textContent = (this.name);
+    
+    for (let i=0; i<workingHours.length; i++){
+        let tdcontent = document.createElement('td');
+        tdcontent.textContent = this.avgCookiePerHour[i]
+        dataRow.appendChild(tdcontent);
     }
-    let totalLo1 = document.createElement('td');
-        dataRow1.appendChild(totalLo1);
-        totalLo1.textContent = branches[0].totalAvgs;
-       
-        ////////////////////////////////////////////////////
+    let totalDataEach = document.createElement('td');
+    dataRow.appendChild(totalDataEach);
+    totalDataEach.textContent = (this.totalAvgs);
+}
 
-    let dataRow2 = document.createElement('tr');
-    table.appendChild(dataRow2);
-    let rowName2 = document.createElement('td');
-    dataRow2.appendChild(rowName2);
-    rowName2.textContent= (branches[1].name);
-    for(let i=0; i<workingHours.length; i++){
-    let rowContent2 = document.createElement('td');
-    dataRow2.appendChild(rowContent2);
-    rowContent2.textContent= (branches[1].avgCookiePerHour[i]);
-    }
-    let totalLo2 = document.createElement('td');
-        dataRow2.appendChild(totalLo2);
-        totalLo2.textContent = branches[1].totalAvgs;
+/// calling functions
 
-        ///////////////////////////////////////////////////////
-
-    let dataRow3 = document.createElement('tr');
-    table.appendChild(dataRow3);
-    let rowName3 = document.createElement('td');
-    dataRow3.appendChild(rowName3);
-    rowName3.textContent= (branches[2].name);
-    for(let i=0; i<workingHours.length; i++){
-    let rowContent3 = document.createElement('td');
-    dataRow3.appendChild(rowContent3);
-    rowContent3.textContent= (branches[2].avgCookiePerHour[i]);
-    }
-    let totalLo3 = document.createElement('td');
-        dataRow3.appendChild(totalLo3);
-        totalLo3.textContent = branches[2].totalAvgs;
-
-        ///////////////////////////////////////////////////////////
-
-    let dataRow4 = document.createElement('tr');
-    table.appendChild(dataRow4);
-    let rowName4 = document.createElement('td');
-    dataRow4.appendChild(rowName4);
-    rowName4.textContent= (branches[3].name);
-    for(let i=0; i<workingHours.length; i++){
-    let rowContent4 = document.createElement('td');
-    dataRow4.appendChild(rowContent4);
-    rowContent4.textContent= (branches[3].avgCookiePerHour[i]);
-    }
-    let totalLo4 = document.createElement('td');
-        dataRow4.appendChild(totalLo4);
-        totalLo4.textContent = branches[3].totalAvgs;
-
-        /////////////////////////////////////////////////////
+for( let i =0; i< branches.length; i++){
+    branches[i].customersPerHourFun();
+    branches[i].calcAvgCookiePerHour();
+    branches[i].render();
+}
 
 
-    let dataRow5 = document.createElement('tr');
-    table.appendChild(dataRow5);
-    let rowName5 = document.createElement('td');
-    dataRow5.appendChild(rowName5);
-    rowName5.textContent= (branches[4].name);
-    for(let i=0; i<workingHours.length; i++){
-    let rowContent5 = document.createElement('td');
-    dataRow5.appendChild(rowContent5);
-    rowContent5.textContent= (branches[4].avgCookiePerHour[i]);
-    }
-    let totalLo5 = document.createElement('td');
-        dataRow5.appendChild(totalLo5);
-        totalLo5.textContent = branches[4].totalAvgs;
-        }  
 
-tableMain();
-
-function tableFooter() {
+ let tableFooter = function () {
     let totalRow = document.createElement('tr');
     table.appendChild(totalRow);
-    let totalsName = document.createElement('td')
+
+    let totalsName = document.createElement('th')
     totalRow.appendChild(totalsName);
     totalsName.textContent = ('Totals');
+
+    let totalOfTotal=0;
+
     for (let i = 0; i < workingHours.length; i++) {
-        let totalsData = document.createElement('td');
+        let totalEachHour=0;
+
+        for (let j =0; j< branches.length; j++){
+            totalEachHour += branches[j].avgCookiePerHour[i];
+            totalOfTotal += branches[j].avgCookiePerHour[i];
+        }
+
+        let totalsData = document.createElement('th');
         totalRow.appendChild(totalsData);
-        totalsData.textContent = (totalCo[i]);
+        totalsData.textContent = totalEachHour;
     }
-    let totalOTotal = document.createElement('td');
+
+    let totalOTotal = document.createElement('th');
     totalRow.appendChild(totalOTotal);
     totalOTotal.textContent = (totalOfTotal)
     
