@@ -22,33 +22,40 @@
         <h1>
             Salmon-Cookies
         </h1>
+        <hr>
 
     </header>
     <main>
+        <p id="welcomeToSales">
+            Welcome to sales section, here you can see our hourly sales, and you can also add any new location by only
+            adding some information and pressing the submit button
+        </p>
+
         <fieldset>
+            <h3>Add a new Location here 👇</h3>
             <form action="" id="sales">
                 <label for="branchField">Location</label>
-                <input type="text" id="branchField" name="branch" autocomplete="off"required>
+                <input type="text" id="branchField" name="branch" autocomplete="off" required>
                 <br>
                 <br>
                 <label for="minimumSale">Mininmum Cookies-Sale</label>
-                <input type="number" id="minimumSale" name="min"required>
+                <input type="number" id="minimumSale" name="min" required>
                 <br>
                 <br>
                 <label for="maximumSale">Maximum Cookies-Sale</label>
-                <input type="number" id="maximumSale" name="max"required>
+                <input type="number" id="maximumSale" name="max" required>
                 <br>
                 <br>
                 <label for="avgSale">Average Cookies-Sale</label>
-                <input type="number" name="avg" id="avgSale"required>
+                <input type="number" name="avg" id="avgSale" required>
                 <br>
                 <br>
 
-                <input type="submit" >
+                <input type="submit" id="submitB">
 
             </form>
 
-            
+
         </fieldset>
 
 
@@ -59,9 +66,12 @@
         <div id="container">
 
         </div>
+        
 
     </main>
     <footer>
+        <h3>&reg; Pat's Salmon Cookies</h3>
+        <p>Contact us : <br> Jordan- Amman, 00962797173421</p>
 
     </footer>
     <script src="js/app.js" ;>
