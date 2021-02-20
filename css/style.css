@@ -14,13 +14,32 @@ html, body{
 }
 
 *{
-    background-color: rgb(255, 255, 255);
     font-family:sans-serif;
+    /* background-image: url('/img/New-Project.jpg'); */
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+body{
+    background-image: url('/img/1613824842834 (2).png');
+    background-repeat: no-repeat;
+    background-position:inherit;
+    background-size: 100%;
+
+}
+header{
+    background-image: unset;
+}
+nav{
+    background-image: unset;
 }
 li {
     list-style-type: none;
+    background-image: unset;
 }
-
+main{
+    background-image: unset;
+    background-color: transparent;
+}
 #homeb {
     list-style-type: none;
     font-size: 40px;
@@ -33,16 +52,16 @@ li {
 }
 #homeP{
     font-size: 30px;
-    background-color: ivory;
-    color: lightslategray;
+    background-color: transparent;
+    color: #334e6a;
     text-align: center;
     font-family: cursive;
 }
 #youCanFind{
-    font-size: 25px;
-    font-family: unset;
+    font-size: 39px;
+    font-family: 'Ranchers';
     margin-left: 17px;
-    color: rgb(114, 146, 250);
+    color: rgb(39, 85, 233);
     margin-top: 130px;
 }
 #sales{
@@ -69,6 +88,7 @@ h1{
     color: rgb(114, 146, 250);
     font-size: 71px;
     margin-top: -30px;
+    background-image: unset;
 }
 #homeh1{
     font-family: 'Anton', sans-serif;
@@ -85,9 +105,9 @@ h3{
     width: 338px;
     position: relative;
     left: 575px;
-    color: lightslategrey;
+    color: #334e6a;
     font-family: 'El Messiri';
-    background-color: ivory;
+    background-color: transparent;
 }
 
 fieldset{
@@ -161,25 +181,29 @@ h3{
 #homep{
     font-size: 35px;
     font-family: 'Josefin Sans', sans-serif;
+    background-color: transparent;
 
 }
 #loc {
     
-    font-size: 20px;
+    font-size: 27px;
     font-family: monospace;
-    color:lightslategray;
+    color: #1000ff;
+    font-weight: bolder;
 }
 #loc li{
     list-style: circle;
 }
 
 h4 {
-    color:rgb(114, 146, 250);
-    font-family: sans-serif;
-    font-size: 30px;
+    color: rgb(39 85 233);
+    font-family: 'Ranchers';
+    font-size: 39px;
+    text-align: center;
 }
 .photos{
-    width: 15%;
+    width: 23%;
+
 }
 
 footer{
@@ -211,3 +235,45 @@ footer p{
     font-family: cursive;
     color: lightslategray;;
 }
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 635px;
+    position: relative;
+    left: 400px;
+  
+}
+.card {
+    display: inline-block;
+}
+#cookiePacks{
+    display: inline-block;
+    position: relative;
+    left: 200px;
+}
+#cookiePacks img{
+        width: 80%;
+        margin-right: 0%;
+        /* width: 617px; */
+    }
+    #cookiePacks #co18{
+        display: inline-block;
+        /* width: 617px; */
+    }
+    #cookiePacks #co12{
+        display: inline-block;
+        /* width: 617px; */
+    }
+    #cookiePacks #co6{
+        display: inline-block;
+        }
+        #cookiePacks #co6 img{
+            width: 200px;
+            
+        }
+        figcaption{
+            font-family: math;
+            font-size: 22px;
+
+        }
